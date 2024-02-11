@@ -13,7 +13,7 @@
 
         .chat-container {
             float: right;
-            width: 80%;
+            width: 75%;
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 20px;
@@ -60,13 +60,80 @@
         }
 
         #send-button:hover {
+            transition-duration: 0.1s;
             background-color: #0056b3;
+        }
+
+        table {
+            position: absolute;
+            top: 30px;
+            left: 6px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 20%;
+            font-size: 20px;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 16px;
+        }
+
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .homebtn {
+            position: absolute;
+            background: #007bff;
+            color: #fff;
+            width: 5%;
+            padding: 0.2%;
+            left: 15px;
+            bottom: 30px;
+            font-size: 14px;
+            border-radius: 10px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .homebtn:hover {
+            background: #0056b3;
+            transition-duration: 0.1s;
+        }
+
+        .home {
+            width: 30px;
+            height: 30px;
         }
     </style>
 </head>
 <body>
 
-<div style="background-color: #0056b3; height: 20px; width: 20px"></div>
+<table>
+    <tr>
+        <th>Members</th>
+    </tr>
+    <tr>
+        <td>Member 1</td>
+    </tr>
+    <tr>
+        <td>Member 2</td>
+    </tr>
+    <tr>
+        <td>Member 3</td>
+    </tr>
+    <tr>
+        <td>Member 4</td>
+    </tr>
+    <tr>
+        <td>Member 5</td>
+    </tr>
+</table>
+
 
 <div class="chat-container">
     <div class="chat-messages" id="chat-messages">
@@ -75,6 +142,10 @@
     <input type="text" id="message-input" placeholder="Type a message...">
     <button id="send-button">Send</button>
 </div>
+
+<a class="homebtn" href="index.jsp">
+    <img class="home" src="../../../resources/static/home.webp" alt="Home Button">
+</a>
 
 <script>
     document.getElementById('send-button').addEventListener('click', function() {
