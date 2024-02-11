@@ -65,6 +65,9 @@
     </style>
 </head>
 <body>
+
+<div style="background-color: #0056b3; height: 20px; width: 20px"></div>
+
 <div class="chat-container">
     <div class="chat-messages" id="chat-messages">
         <!-- Chat messages will be inserted here -->

@@ -9,4 +9,9 @@ public class MainController {
     public String start(){
         return "index";
     }
+
+    @RequestMapping("/chat")
+    public String chat(){
+        return "chat";
+    }
 }
