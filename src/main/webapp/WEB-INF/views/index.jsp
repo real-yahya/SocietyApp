@@ -18,13 +18,12 @@
             align-items: flex-start; /* Align items towards the start of the container */
         }
         .stories {
-            position: absolute;
-            left: 0px;
+            flex: 1;
             width: 300px;
             border: 3px solid #73AD21;
             padding: 10px;
             background-color: #f0f0f0;
-            padding: 20px;
+
             /*margin-right: 20px; Adjust margin between stories and posts */
         }
         .story-container {
