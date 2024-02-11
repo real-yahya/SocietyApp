@@ -1,4 +1,4 @@
-package com.example.societyapp.Controllers;
+package com.example.societyapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
     @RequestMapping("/")
-    public String main(){
-        return "main";
+    public String comp(){
+        return "home";
     }
 }
