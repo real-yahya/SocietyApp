@@ -81,7 +81,7 @@
                 <div class="story">
                     <img src="https://via.placeholder.com/150">
                 </div>
-                <span class="story-username">Username 1</span>
+                <span class="story-username">Volleyball society</span>
             </button>
         </a>
 
