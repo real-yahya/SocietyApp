@@ -1,3 +1,4 @@
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +27,10 @@
 
             /*margin-right: 20px; Adjust margin between stories and posts */
         }
-        .story-container {
+        .story-container-button {
             display: flex;
+            width: 100%;
+            outline-color: rgba(0, 0, 0, 0);
             align-items: center;
             margin-bottom: 10px; /* Adjust spacing between story containers */
         }
@@ -73,71 +76,54 @@
     <!-- Stories -->
     <div class="stories">
         <h2>Stories</h2>
-        <div class="story-container">
-            <div class="story">
-                <img src="https://via.placeholder.com/150">
-            </div>
-            <span class="story-username">Username 1</span>
-        </div>
+        <a href="/?societyName=volleyball">
+            <button class="story-container-button">
+                <div class="story">
+                    <img src="https://via.placeholder.com/150">
+                </div>
+                <span class="story-username">Username 1</span>
+            </button>
+        </a>
+
         <!-- Add more stories here -->
-        <div class="story-container">
+        <button class="story-container-button">
             <div class="story">
                 <img src="https://via.placeholder.com/150">
             </div>
             <span class="story-username">Username 2</span>
-        </div>
-        <div class="story-container">
+        </button>
+        <button class="story-container-button">
             <div class="story">
                 <img src="https://via.placeholder.com/150">
             </div>
             <span class="story-username">Username 3</span>
-        </div>
-        <div class="story-container">
+        </button>
+        <button class="story-container-button">
             <div class="story">
                 <img src="https://via.placeholder.com/150">
             </div>
             <span class="story-username">Username 4</span>
-        </div>
-        <div class="story-container">
-            <div class="story">
-                <img src="https://via.placeholder.com/150">
-            </div>
-            <span class="story-username">Username 5</span>
-        </div>
-        <div class="story-container">
-            <div class="story">
-                <img src="https://via.placeholder.com/150">
-            </div>
-            <span class="story-username">Username 6</span>
-        </div>
-        <div class="story-container">
-            <div class="story">
-                <img src="https://via.placeholder.com/150">
-            </div>
-            <span class="story-username">Username 7</span>
-        </div>
+        </button>
+
     </div>
 
     <!-- Posts -->
+
     <div class="posts">
         <h2>Posts</h2>
-        <div class="post">
-            <img src="https://via.placeholder.com/800x400">
-            <div class="post-content">
-                <h2>Username</h2>
-                <p>This is a sample post.</p>
-                <!-- Add like, comment, share, donate buttons here -->
+        <c:forEach items="${posts}" var="postList">
+            <div class="post">
+                <img src="${postList.get(0)}">
+                <div class="post-content">
+                    <h2>${postList.get(1)}</h2>
+                    <p>${postList.get(2)}</p>
+                    <!-- Add like, comment, share, donate buttons here -->
+                </div>
             </div>
-        </div>
+        </c:forEach>
 
-        <div class="post">
-            <img src="https://via.placeholder.com/800x400">
-            <div class="post-content">
-                <h2>Another Username</h2>
-                <p>This is another sample post.</p>
-                <!-- Add like, comment, share, donate buttons here -->
-            </div>
-        </div>
+
+
         <!-- Add more posts here -->
     </div>
 </div>
