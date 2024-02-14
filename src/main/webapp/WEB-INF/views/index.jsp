@@ -5,6 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram-like Feed</title>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAXIWnb3TjyBddMcp7bunQlXaARyIVjyOc",
+            authDomain: "societycircle-84ae9.firebaseapp.com",
+            projectId: "societycircle-84ae9",
+            storageBucket: "societycircle-84ae9.appspot.com",
+            messagingSenderId: "928594010384",
+            appId: "1:928594010384:web:93a5249b7c58b0c3644595",
+            measurementId: "G-70YFJRYJ8B"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
     <style>
         /* Basic styling for demonstration purposes */
         body {
